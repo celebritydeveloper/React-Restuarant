@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'react-bootstrap';
-import App from './components/App';
+import Meals from './components/Meals';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Meals />
   </React.StrictMode>,
   document.getElementById('root')
 );

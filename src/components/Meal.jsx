@@ -3,33 +3,33 @@ import food from '../image/burger.jpg';
 import Icofont from 'react-icofont';
 
 class Meal extends Component {
-    state = {  }
+    state = { 
+        meal: this.props.meal
+     }
 
-    
-    render() {
+    handleIncrement = (id, vendor, price) => {
+        console.log("It works", id, vendor, price );
+    }
+    render() {        
         return ( 
-            <section className="container">
-                <div className="card__deck">
-                    <div className="card">
-                        <img src={food} className="card--img-top" alt="..." />
-                        <div className="card__body">
-                            <h5 className="card--title">Hamburger</h5>
-                            <p className="card--text">Market Square</p>
-                            <div className="card__footer">
-                                <div className="card__stars">
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                </div>
-                                <p className="card--price">N900</p>
+            <div className="card">
+                <img src={food} className="card--img-top" alt="..." />
+                    <div className="card__body">
+                        <h5 className="card--title">{this.props.meal.food}</h5>
+                        <p className="card--text">{this.props.meal.vendor}</p>
+                        <div className="card__footer">
+                            <div className="card__stars">
+                                <span><i className="icofont-star"></i></span>
+                                <span><i className="icofont-star"></i></span>
+                                <span><i className="icofont-star"></i></span>
+                                <span><i className="icofont-star"></i></span>
+                                <span><i className="icofont-star"></i></span>
                             </div>
-                            <button className="btn btn-success" onClick={this.props.onAdd}>Add to Cart</button>
+                            <p className="card--price">{`N${this.props.meal.price}`}</p>
                         </div>
-                    </div>                        
+                            <button className="btn btn-success" onClick={() => this.handleIncrement(this.props.meal.food,this.props.meal.vendor,this.props.meal.price)}>Add to Cart</button>
+                    </div>
                 </div>
-            </section>
          );
     }
 }

@@ -25,67 +25,9 @@ class Meal extends Component {
                                 </div>
                                 <p className="card--price">N900</p>
                             </div>
-                            <button className="btn btn-success">Add to Cart</button>
+                            <button className="btn btn-success" onClick={this.props.onAdd}>Add to Cart</button>
                         </div>
-                    </div>
-
-                    <div className="card">
-                            <img src={food} className="card--img-top" alt="..." />
-                        <div className="card__body">
-                            <h5 className="card--title">Fried Rice and Chicken</h5>
-                            <p className="card--text">Kilimanjaro</p>
-                            <div className="card__footer">
-                                <div className="card__stars">
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                </div>
-                                <p className="card--price">N1200</p>
-                            </div>
-                            <button className="btn btn-success">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div className="card">
-                        <img src={food} className="card--img-top" alt="..." />
-                        <div className="card__body">
-                            <h5 className="card--title">Amala and Ewedu Soup</h5>
-                            <p className="card--text">Mummy Ola Cateen</p>
-                            <div className="card__footer">
-                                <div className="card__stars">
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                </div>
-                                <p className="card--price">N600</p>
-                            </div>
-                            <button className="btn btn-success">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div className="card">
-                        <img src={food} className="card--img-top" alt="..." />
-                        <div className="card__body">
-                            <h5 className="card--title">Amala and Ewedu Soup</h5>
-                            <p className="card--text">Mummy Ola Cateen</p>
-                            <div className="card__footer">
-                                <div className="card__stars">
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                    <span><i className="icofont-star"></i></span>
-                                </div>
-                                <p className="card--price">N600</p>
-                            </div>
-                            <button className="btn btn-success">Add to Cart</button>
-                        </div>
-                    </div>
-                        
+                    </div>                        
                 </div>
             </section>
          );

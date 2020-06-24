@@ -26,7 +26,6 @@
 }
 
 .card {
-  background: #fff;
   -webkit-box-shadow: 2px 5px 15px lightgray;
           box-shadow: 2px 5px 15px lightgray;
 }
@@ -38,6 +37,7 @@
 
 .card__body {
   margin-top: 0;
+  padding: 0 13px 10px 13px;
 }
 
 .card--title {
@@ -58,14 +58,8 @@
   width: 30%;
 }
 
-.card__star {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.card__stars {
+  margin-top: 15px;
 }
 
 .card__footer {
@@ -73,12 +67,12 @@
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .card--price {
-  -ms-grid-column-align: end;
-      justify-self: end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   -ms-grid-column-align: center;
       justify-self: center;
   font-weight: bold;

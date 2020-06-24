@@ -12,11 +12,16 @@ class App extends Component {
             {id: 1, value: 0}
         ]
      };
+
+    addToCart = () => {
+        console.log("Hello World");
+        this.setState({value: this.state.cart.value + 1});
+    }
     render() { 
         console.log(this.state.cart.map(val => val.value));
         return ( 
             <div>
-                <Meal value={this.state.cart.value}/>
+                <Meal value={this.state.cart.value} onAdd={this.addToCart} />
             </div>
          );
     }
